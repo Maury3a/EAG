@@ -1,0 +1,312 @@
+/*Todos los elementos*/
+*{
+font-family: 'Open Sans', sans-serif;
+text-decoration: none;
+list-style: none;
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+}
+
+/*la html y la body*/
+html, body{
+	font-size: 16px;
+}
+
+/*h1,h2,...y h6*/
+h1,h2,h3,h4,h5,h6{
+font-family: 'Poppins', sans-serif;
+text-transform: uppercase;
+}
+
+/*la h1*/
+h1{
+font-size:3rem;
+ }
+
+/*cualquier parrafo*/
+p{
+font-size: 1rem;
+}
+
+/*Cualquier enlaze*/
+a{
+color: #000;
+}
+
+/*La clase izquierda y la clase derecha*/
+.derecha, .izquierda{
+width: 50%;
+}
+
+
+/*despues de la clase  deco*/
+.deco::after{
+	content: "";
+	display: block;
+	margin: 20px auto;
+	height: 5px;
+	background-color: rgb(45, 192, 232);
+	width: 50px;
+	
+}
+
+/*el div con id navegacion y la lista dentro del nav con id menu*/
+div#navegacion, nav#menu ul{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 20px 0;
+	justify-content: space-around;
+	align-items:center;
+}
+
+
+/*el div con id navegacion*/
+div#navegacion {
+	width: 100%;
+	background-color:white;
+	box-shadow: 0 1px 5px rgba(0,0,0,.2);
+	position:fixed;
+	top: 0;
+}
+
+/*la li de la lista dentro de la nav con id menu*/
+nav#menu ul li{
+   margin-left: 20px;
+   text-transform: uppercase;
+}
+
+/*la header con id banner*/
+header#banner {
+	width: 100%;
+	height: 100vh;
+	margin-top: 102px;
+	background-color:#1f334a; 
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	text-align: center;
+	justify-content:center;
+	align-items:center;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	color: #fff;
+
+	
+}
+
+/*la h1 dentro de la header con id banner*/
+ header#banner h1{
+	color: #ddd;
+
+}
+
+/*Cualquier parrafo dentro de la header con id banner*/
+header#banner p{
+	line-height: 180%;
+	width: 70%;
+
+}
+
+/*Cualquier enlace dentro de la header con id banner*/
+
+header#banner a{
+	display: inline-block;
+	background-color: rgb(45, 192, 232);
+	padding: 10px 20px;
+	color: #fff;
+	margin-top: 50px;
+
+}
+
+
+/*la section con id empresa*/
+section#empresa{
+	min-height: 70vh;
+	padding:100px;
+	text-align: justify;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	align-items:center;
+	line-height: 180%;
+	border-bottom: solid 1px #ccc;
+}
+
+/*Cualquier h2 dentro de la section con ide empresa*/
+section#empresa h2{
+	text-align: center;
+	width: 100%;
+	font-size: 2.5rem;
+}
+
+
+/*la section con id servicios*/
+section#servicios{
+	width: 100%;
+	min-height: 70vh;
+	background-color: rgba(200,200,200,.2);
+	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	align-items:center;
+	justify-content:center;
+	align-content:center;
+
+}
+
+/*Cualquier h2 dentro de la section con id servicios*/
+section#servicios h2{
+	width: 100%;
+}
+
+/*El parrafo hijo directo de la section con id servivios*/
+section#servicios > p{
+	max-width: 76%;
+	margin-top: 20px;
+}
+
+/*El article dentro de la section con id servicios*/
+ section#servicios article{
+	width:25%;
+	margin-top: 100px;
+}
+
+
+/*Cualquier etiqueta span dentro de la section con id servicios*/
+section#servicios span{
+	font-size: 4rem;
+	color: rgb(45, 192, 232);
+}
+
+/*Cualquier etiqueta h3 dentro de section con id servicios*/
+section#servicios h3{
+	margin: 20px 0;
+}
+
+/*la section con id normas*/
+section#normas{
+	text-align: center;
+	width: 100%;
+	min-height: 70vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	border-bottom: solid 1px #ddd;
+
+}
+
+
+/*Cualquier parrafo dentro de la section con id normas*/
+section#normas p{
+	max-width: 70%;
+	margin: 50px 0;
+}
+
+/*Cualquier enlace dentro de la section con id normas*/
+section#normas a{
+	padding: 20px 30px;
+	border:solid 2px rgb(45, 192, 232);
+}
+
+/*La section con id presupuesto*/
+section#presupuesto{
+
+	width: 80%;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items:center;
+	justify-content: space-around;
+	line-height: 180%;
+	
+}
+
+
+/*El div con clase derecha dentro de la section con id presupuesto*/
+section#presupuesto div.derecha{
+	margin-left: 50px;
+}
+
+/*Cualquier input dentro del form*/
+form input{
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+/*El input del tipo submit dentro de form*/
+form input[type="submit"]{
+
+	border: none;
+	background-color: rgb(45, 192, 232);
+	color: #fff;
+	font-size: 1rem;
+}
+
+/*El footer*/
+footer{
+	padding: 50px 0;
+	text-align: center;
+	background-color: rgba(200,200,200,.2);
+
+}
+
+/*El small del footer*/
+footer small{
+	font-size: .9rem;
+}
+
+/*Cualquier enlace del footer*/
+footer a{
+	display: inline-block;
+	margin: 10px; 
+	width: 50px;
+	height: 50px;
+	background-color: #ccc;
+	color: #fff;
+	line-height: 50px;	
+	border-radius: 50%;
+
+} 
