@@ -1,0 +1,11 @@
+let primero;
+let segundo;
+let tercero;
+let cuarto;
+let media;
+primero=parseFloat(prompt("Introduce el primer número:"));
+segundo=parseFloat(prompt("Introduce el segundo número:"));
+tercero=parseFloat(prompt("Introduce el tercer número:"));
+cuarto=parseFloat(prompt("Introduce el cuarto número:"));
+media=(primero+segundo+tercero+cuarto)/4;
+alert("El valor medio de todos los número es: "+media);

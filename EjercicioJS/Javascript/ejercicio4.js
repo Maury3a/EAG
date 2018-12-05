@@ -1,0 +1,16 @@
+let suma;
+let multiplicación;
+let primero;
+let segundo;
+let tercero;
+let cuarto;
+let resultado1;
+let resultado2;
+	primero=parseFloat(prompt("Introduce el primer número"));
+	segundo=parseFloat(prompt("Introduce el segundo número"));
+	tercero=parseFloat(prompt("Introduce el tercer número"));
+	cuarto=parseFloat(prompt("Introduce el cuarto número"));
+	resultado1=primero+segundo;
+	resultado2=tercero*cuarto;
+alert("El primer resultado es "+resultado1);
+	  alert("el segundo resultado es "+resultado2);
