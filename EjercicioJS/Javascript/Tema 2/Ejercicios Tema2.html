@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head><script>
+//Ejercicio 10
+	
+	/*var palabra=prompt("Palabra en inglés");
+	
+	case "dog":
+		document.write("Perro");
+		break;
+	
+	case "yellow":
+		document.write("Amarillo");
+		break;
+	
+	case "cat":
+		document.write("Gato");
+		break;
+	
+	case "Sleep":
+		document.write("Dormir");
+		break;
+	
+	default:
+	document.write("No tenemos esa palabra");
+	*/
+	//Ejercicio 9
+	
+
+	var direccion=prompt("Introduce una dirección");
+	var dir=direccion.split("//");
+	 if(dir[0]=="http:")
+		 alert("El prefijo es http://");
+	
+	if(dir[0]=="https:")
+		 alert("El prefijo es https://");
+	
+	if (dir[0]!="https:" ||dir[0]!="http:")
+		alert("El prefijo no es correcto y debería ser https://"+direccion);
+	</script>
+<body>
+</body>
+</html>
