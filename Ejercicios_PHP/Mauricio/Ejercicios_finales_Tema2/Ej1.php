@@ -131,24 +131,23 @@
 	
 	//.....Ej10.....
 	
-	$notas=["Lengua"=>3,"Literatura"=>8,"Matemáticas"=>6,"PHP"=>7,"Wordpress"=>5];
+	$notas=["Lengua"=>2,"Literatura"=>8,"Matemáticas"=>6,"PHP"=>7,"Wordpress"=>5];
 	
 	
-	$media=($notas[0]+$notas[1]+$notas[2]+$notas[3]+$notas[4])/5;
+	$media=($notas["Lengua"]+$notas["Literatura"]+$notas["Matemáticas"]+$notas["PHP"]+$notas["Wordpress"])/5;
 	echo $media;
 	switch($media){
-		case 1:
-			$media<5;
+		case $media<5;
+			
 				echo "Suspenso";
-	
-		case 2:
-			$media>=5 && $media<7;
+		case $media>=5 && $media<7;
+			
 				echo "Bien";
-		case 3:
-			$media>=7 && $media<9;
+		case $media>=7 && $media<9;
+			
 				echo "Notable";
-		case 4:
-			$media>=9 && $media<10;
+		case $media>=9 && $media<10;
+			
 				echo "Sobresaliente";
 	}
 	?>
