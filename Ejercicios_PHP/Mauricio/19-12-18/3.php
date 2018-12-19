@@ -5,6 +5,10 @@
 <title>Documento sin título</title>
 </head>
 <?php
+-Crear una matriz asociativa con los nombres de las filas como nombres de alumnos y las posiciones con notas de asignaturas.
+	-Extraer en arrays nuevos los nombres de los alumnos, de las asignaturas y las notas de cada uno,
+	-Recorrer con el bucle for las notas de cada uno, y mostrar por pantalla que asignaturas tiene aprobadas y suspensas
+	
 	$alumno["Javier"]=["HTML"=>9,"Wordpress"=>4,"PHP"=>8,"Javascript"=>3];
 	$alumno["Álvaro"]=["HTML"=>4,"Wordpress"=>2,"PHP"=>8,"Javascript"=>9];
 	$alumno["Esteban"]=["HTML"=>3,"Wordpress"=>7,"PHP"=>9,"Javascript"=>5];
@@ -23,7 +27,7 @@
 		}
 	}
 	
-	//Repetir este fpr para cada uno de los alumnos
+	//Repetir este for para cada uno de los alumnos
 	?>
 <body>
 </body>
