@@ -1,0 +1,51 @@
+.item{
+    background-color:aqua;
+    width:75%;
+    margin-left: 12.5%;
+    text-align: center;
+    display: inline-block;
+    border:2px solid sandybrown;
+
+}
+
+.item img{
+    width:75%;
+    border:2px solid black;
+}
+
+.item h1{
+    width:45%;
+    margin-left:27.5%;
+    
+    text-align: center;
+    background-color:lightgreen;
+    border: 2px solid;
+}
+
+.item h2{
+    width:25%;
+    margin-left:37.5%;
+    
+    text-align: center;
+    background-color:cornflowerblue;
+    border: 2px solid;
+}
+
+.item a{
+    text-decoration: none;
+    background-color: coral;
+    display:inline-block;
+    font-size: 1.35rem;
+    margin-bottom: 20px;    
+    width:25%;
+    border:2px solid black;    
+
+}
+
+.item p{
+    margin-left:37.5%;
+    width:25%;
+    border:2px solid black;    
+    word-wrap: break-word;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

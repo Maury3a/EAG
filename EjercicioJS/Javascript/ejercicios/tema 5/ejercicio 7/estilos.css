@@ -1,0 +1,12 @@
+ h1{
+    text-transform: uppercase;
+}
+
+.item span{
+    color:crimson;
+    font-size: 25px;
+}
+
+.item img{
+    width: 50px;
+}

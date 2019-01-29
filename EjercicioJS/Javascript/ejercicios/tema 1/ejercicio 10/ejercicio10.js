@@ -1,0 +1,11 @@
+let nombre, practica, problemas, teoria, total;
+nombre=prompt("escribe tu nombre");
+practica=parseFloat(prompt("escribe la nota de practica"));
+total=practica*0.10;
+alert("total practica "+total);
+problemas=parseFloat(prompt("escribe la nota de problemas"));
+total=problemas*0.50;
+alert("total problemas "+total);
+teoria=parseFloat(prompt("escribe la nota de teoria"));
+total=teoria*0.40;
+alert("total teoria "+total);
