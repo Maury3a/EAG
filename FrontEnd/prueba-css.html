@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+body{
+    display: flex;
+}
+img:hover{
+    transform-origin: right top;
+}
+img.img1,img.img2,img.img3{
+    border:solid 10px white;
+    box-shadow: 3px black;
+    transition:all 1s ease-out;
+  
+}
+img.img1:hover{
+ transition: 2s;
+  transform: rotate(45deg);
+}
+img.img2:hover{
+ transition: 2s;
+  transform: rotate(85deg);
+}img.img3:hover{
+    transition:all 1s erase-out;
+  transform: scale(10);
+}
+</style>
+<body>
+    <img class="img1"src="foto1.jpg">
+    <img class="img2"src="foto2.jpg">
+    <img class="img3"src="foto3.jpg">
+</body>
+</html>  
