@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		display: flex;
+		background-color: yellow;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+	}
+	div{
+		width: 200px;
+		height: 200px;
+		background-color: tomato;
+		margin: 0 10px;
+		transition: all 600ms;
+		cursor: pointer;
+	}
+	
+	#caja1:hover{
+		transform: scale(1.1);
+		background-color: turquoise;
+	}
+	#caja2:hover{
+		transform: rotate(10deg) scale(1.1);
+		background-color: turquoise;
+	}
+	#caja3{
+		background: url(img/foto1.jpg);
+	}
+	#caja3:hover{
+		background-position: 50% 50%;
+	}#caja4{
+		background: url(img/foto3.jpg)center center;
+		background-size: 100%;
+	}
+	#caja4:hover{
+		background-size: 120%;
+
+	}
+	#caja5{
+		background: url(img/foto6.jpg) 80% 50%;
+	}
+	#caja5:hover{
+		background-position: 50% 50%;
+	}
+	#caja6{
+		background: url(img/trabajo1.jpg) center center / cover;
+		display: flex;
+		overflow: hidden; //quitamos lo que sobra de la caja
+	}
+	#caja6 h2{
+		background-color: black;
+		color: white;
+		width: 100%;
+		height: 100%;
+		margin-top: 100%;
+		transition: all 0.5s;
+		text-align:center;
+		line-height: 80px;
+	}
+	#caja6:hover h2{
+		
+		margin-top: 60%;
+
+	}
+	#caja7:hover{
+		border-radius:100%;
+	}
+	
+	@keyframes mover{
+		0%{
+			width: 200px;
+			transform: translatex(0);
+			
+		}
+		50%{
+			width: 400px;
+			background-color: palevioletred;
+			transform: translate(100%)
+		}
+		100%{
+			width: 600px;
+			background-color: red;
+			transform: translate(0%;)
+		}
+	}
+	
+	#caja8{
+		animation: mover 1s infinite;
+	}
+	</style>
+<body>
+	<div id="caja1"></div>
+	<div id="caja2"></div>
+	<div id="caja3"></div>
+	<div id="caja4"></div>
+	<div id="caja5"></div>
+	<div id="caja6"><h2>TÍTULO</h2></div>
+		
+	<div id="caja7"></div>
+	<div id="caja8"></div>
+</body>
+</html>
