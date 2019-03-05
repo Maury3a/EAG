@@ -1,0 +1,72 @@
+/*Tipografía de toda la página 
+	font-family: 'Roboto', sans-serif;*/
+
+/*Iconos- Nombre de las classes
+	.icon-icon1
+	.icon-icon2
+	.icon-icon3
+	.icon-icon4
+	.icon-icon5
+	.icon-icon6
+	*/
+
+html,body{
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+}
+header{
+	min-height: 100vh;
+	background: url(../img/fondo.jpg) center center no-repeat / cover;
+}
+header div#banner{
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	color: #fff;
+	align-items: center;
+	text-align: center;
+	
+	
+	
+}
+header nav{
+	position: absolute !important; /* en position absolute hay que especificar el ancho, pues deja de funcionar*/
+	width: 80% !important;
+	left: 50%;
+	transform: translate(-50%); /*centramos la caja, es un truco */
+}
+
+header.nav button.navbar-toggler{
+	border: none;
+	outline: none;
+}
+header nav a.nav-item{
+	text-transform: uppercase;
+	font-size: 1rem;/* Cuantas veces multiplicamos 15 px en nuestro caso, que es el tamaño del padre*/
+	font-weight: 500;
+}
+header nav a.nav-item:hover{
+	color: #01ced1 !important;
+}
+div#banner .row{	
+	min-height: 100vh;	
+}
+header h1{
+	font-size: 3rem;
+}
+header p{
+	font-size: 1.3rem;
+} header span{
+	color: #01ced1;
+	
+}
+
+section#servicios{
+	text-align: center;
+	min-height: 80vh;
+}
+section#servicios span{
+	color: #01ced1;
+}
+
+
