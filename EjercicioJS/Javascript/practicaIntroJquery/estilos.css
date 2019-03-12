@@ -1,0 +1,36 @@
+.decorador{
+	text-align: center;
+	width:30%;
+	height: 300px;
+	border:2px solid black;
+
+}
+
+#pantalla1{
+	position:absolute;
+	left:3%;
+	top:43%;
+
+}
+
+#pantalla2{
+	position:absolute;
+	left:34%;
+	top:43%;	
+}
+
+#pantalla3{
+	position: absolute;
+	left:65%;
+	top:43%;
+}
+
+#botonera{
+	width:60%;
+	text-align: center;
+	border:2px solid;
+	position: absolute;
+	left:18%;
+	background-color:lightblue; 
+	line-height: 30px;
+}
