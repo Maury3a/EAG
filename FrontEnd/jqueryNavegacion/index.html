@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
+
+
+<title>Documento sin título</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			text-decoration: none;
+			font-family: "Helvetica", "Sans-Serif";
+		}
+		html,body{
+			font-size: 15px;
+		}
+		nav{
+			background-color: black;
+			padding: 50px;
+			text-align: center;
+			position: fixed;
+			width: 100%;
+			top:0; /*Muy importante si queremos poner la posicion fija, tenemos uqe ponerlo arrba del todo*/
+			
+		}
+		nav a{
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			margin: 0 10px;
+			font-weight: bold;
+			color: white;
+		}
+		section{
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 3rem;
+			color: white;
+			
+		}
+		section#sec1{
+			margin-top: 121px;
+			background-color: tomato;
+		}
+		section#sec2{
+			background-color: steelblue;
+		}
+		section#sec3{
+			background-color: turquoise;
+		}
+		section#sec4{
+			background-color: crimson;
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<a href="#sec1"class="enlace">Enlace 1</a>
+		<a href="#sec2"class="enlace">Enlace 2</a>
+		<a href="#sec3" class="enlace">Enlace 3</a>
+		<a href="#sec4" class="enlace">Enlace 4</a>
+	</nav>
+	<section id="sec1">
+		<h2>SECCIÓN 1</h2>
+	</section>
+	<section id="sec2">
+		<h2>SECCIÓN 2</h2>
+	</section>
+	<section id="sec3">
+		<h2>SECCIÓN 3</h2>
+	</section>
+	<section id="sec4">
+		<h2>SECCIÓN 4</h2>
+	</section>	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script>
+	$(function(){
+		$(".enlace").click(function(e){
+			e.preventDefault();
+			let ancla=$(this).attr('href');
+
+			$("html,body").animate({
+				scrollTop:$(ancla).offset().top-121
+			},1000);
+		})
+
+	})
+	</script>
+</body>
+</html>
