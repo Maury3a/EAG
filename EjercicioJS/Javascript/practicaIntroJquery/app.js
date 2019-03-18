@@ -417,6 +417,9 @@ function inicio(){
 	boton.eq(9).click(cambiarTextoUno);
 	boton.eq(10).click(cambiarAlturaTodos);
 	boton.eq(11).click(cambiarAlturaUno);
+	boton.eq(12).click(desaparecer);
+	boton.eq(13).click(mostrar);
+	boton.eq(14).click(reset);
 	
 }
 function cambiarFondoTodos(){
@@ -444,33 +447,51 @@ function cambiarImagenUno(){
 	 $("#pantalla1 img").attr("src", "http://2.bp.blogspot.com/_QtDFVR44S_Q/TTu95-aiCqI/AAAAAAAAA-k/jP65Ns2H-f0/s1600/camaleon2.jpg");
 }
 function cambiarTextoTodos(){
-	$("h3").text("Hola")
+	$("h3").text("Hola");
 }
 function cambiarTextoUno(){
-	$("#pantalla2 h3").text("Esta es la pantalla 2")
+	$("#pantalla2 h3").text("Esta es la pantalla 2");
 }
 function cambiarAlturaTodos(){
-	$(".decorador").css("height","500px")
+	$(".decorador").css("height","500px");
 }
 function cambiarAlturaUno(){
-	$("#pantalla3").css("height","500px")
+	$("#pantalla3").css("height","500px");
 }
 
 
 
-//function desaparecer(){
-        // $("#principal").hide(2000);
-        // $("#noticias").slideUp(2000);
-        // $("#secundario").fadeOut(2000);
+function desaparecer(){
+         $("#pantalla1").hide(2000);
+       $("#pantalla2").slideUp(2000);
+        $("#pantalla3").fadeOut(2000);
+}
+function mostrar(){
+	  $("#pantalla1").toggle(2000);
+          $("#pantalla2").slideToggle(2000);
+         $("#pantalla3").fadeToggle(2000);
+}
+function reset(){
+$(".decorador").css("background-color","white");
+$(".decorador").css("font-size","1.17em");
+$(".decorador").css("border","2px solid black");
+$(".decorador").height(300);
+$(".decorador").css("border-radius","0");
+$("#pantalla2 h3").text("PANTALLA2");
+$("#pantalla1 h3").text("PANTALLA1");
+$("#pantalla3 h3").text("PANTALLA3");
+ $("#pantalla1 img").attr("src", "pantalla1.jpg");
+ $("#pantalla2 img").attr("src", "pantalla2.jpg");
+ $("#pantalla3 img").attr("src", "pantalla3.jpg");
+}
 
         // Los siguiente son los mismos efectos de ocultar pero con la opción de clickar y desaparecer y clickar y reaparecer continuamente con el toggle:
 
-        // $("#principal").toggle(2000);
-        // $("#noticias").slideToggle(2000);
-        // $("#secundario").fadeToggle(2000);
+        //  $("#pantalla1").toggle(2000);
+        //  $("#pantalla2").slideToggle(2000);
+        // $("#pantalla3").fadeToggle(2000);
 
 //        $("#menu_principal").css("position","relative");
 //        $("#menu_principal").animate({width:200,height:200},3000);
 //
 //
-//}
