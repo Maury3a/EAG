@@ -1,0 +1,12 @@
+.color
+{
+	background-color: tomato;
+	color:blue;
+	font-size: 1.5em;
+}
+
+.bordes
+{
+	border-top:2px solid red;
+	border-bottom: 1px dashed green;
+}
