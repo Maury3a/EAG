@@ -1,0 +1,193 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh15600\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 BASES DE DATOS\
+\
+
+\f1\b METER DATOS EN TABLA GRUPOS
+\f0\b0 \
+\
+INSERT INTO grupo VALUES ('G1\'92,\'922\'92,'21\'92,\'92A1\'92,\'92M\'92,\'9223');\
+INSERT INTO grupo VALUES ('G2''1' '15''A2''M''18');\
+INSERT INTO grupo VALUES ('G3''3' '21''A3''M''20');\
+INSERT INTO grupo VALUES ('G4''3' '15''A3''T''20');\
+\
+\
+\
+
+\f1\b EJERCICIO 2 PAG 104 PDF
+\f0\b0 \
+\
+SELECT DISTINCT alumnos.nom_alum, asignaturas.nom_asig\
+FROM alumnos, asignaturas, matriculas\
+WHERE matriculas.dni = alumnos.dni and matriculas.cod_asig = asignaturas.cod_asig\
+\
+\
+
+\f1\b EJERCICIO 3
+\f0\b0 \
+\
+SELECT alumnos.nom_alum, matriculas.calificacion\
+FROM alumnos, matriculas\
+WHERE matriculas.calificacion > 4 and matriculas.cod_asig = 2 and matriculas.dni = alumnos.dni\
+\
+
+\f1\b EJERCICIO 4
+\f0\b0 \
+\
+SELECT DISTINCT asignaturas.nom_asig\
+FROM asignaturas, matriculas\
+WHERE asignaturas.cod_asig = matriculas.cod_asig and matriculas.calificacion < 5\
+\
+
+\f1\b EJERCICIO 5
+\f0\b0 \
+\
+SELECT asignaturas.*\
+FROM asignaturas, alumnos, matriculas	 \
+WHERE alumnos.nom_alum = 'Luis' and alumnos.dni = matriculas.dni and matriculas.cod_asig =asignaturas.cod_asig;\
+\
+\
+\
+\
+
+\f1\b \'95 Mostrar el nombre de los profesores que dan clase en el aula A3
+\f0\b0 \
+\
+SELECT profesores.nom_prof\
+FROM profesores, grupo\
+WHERE profesores.nrp = grupo.nrp and grupo.cod_aula = 'A3';\
+
+\f1\b \
+\'95 Mostrar los c\'f3digos de los grupos enlace os que se imparte Ciencias
+\f0\b0 \
+\
+SELECT grupo.cod_gru\
+FROM grupo, asignaturas\
+WHERE grupo.cod_asig = asignaturas.cod_asig and asignaturas.nom_asig = 'Ciencias';\
+\
+
+\f1\b \'95 Mostrar los c\'f3digos de los grupos en los que imparte clase el profesor Alfonso
+\f0\b0 \
+\
+SELECT grupo.cod_gru\
+FROM grupo, profesores\
+WHERE grupo.nrp = profesores.nrp and profesores.nom_prof = 'Alfonso';\
+\
+
+\f1\b \'95 Mostrar la capacidad de las aulas en las que se imparte Lengua\
+\
+
+\f0\b0 SELECT aula.capacidad\
+FROM aula, grupo, asignaturas\
+WHERE aula.cod_aula = grupo.cod_aula AND grupo.cod_asig = asignaturas.cod_asig and asignaturas.nom_asig = 'Lengua';
+\f1\b \
+\
+\'95 Listar el nombre y la categor\'eda de los profesores que dan clase en el grupo G2\
+\
+
+\f0\b0 SELECT profesores.nrp, profesores.categoria\
+FROM profesores, grupo\
+WHERE profesores.nrp = grupo.nrp and grupo.cod_gru = 'G2';\
+
+\f1\b \
+\'95 Visualizar todos los datos de los grupos en los que imparte clase Helena\
+\
+
+\f0\b0 SELECT grupo.*\
+FROM grupo, profesores\
+WHERE grupo.nrp = profesores.nrp AND profesores.nom_prof = 'Helena';\
+\
+
+\f1\b \'95 Mostrar los nombres y las categor\'edas de los profesores que imparten la asignatura de \'93Ciencias\'94.\
+\
+
+\f0\b0 SELECT profesores.nom_prof, profesores.categoria\
+FROM profesores, grupo, asignaturas\
+WHERE profesores.nrp = grupo.nrp AND grupo.cod_asig = asignaturas.cod_asig AND asignaturas.nom_asig = 'Ciencias';\
+\
+
+\f1\b \'95 Visualizar los nombres de las asignaturas que se imparten por la ma\'f1ana\
+\
+
+\f0\b0 SELECT asignaturas.nom_asig\
+FROM asignaturas, grupo\
+WHERE asignaturas.cod_asig = grupo.cod_asig AND grupo.tipo = 'M';\
+\
+
+\f1\b \'95 Mostrar los nombres de las asignaturas que imparten los profesores del departamento 2\
+\
+
+\f0\b0 SELECT asignaturas.nom_asig\
+FROM asignaturas, grupo, profesores\
+WHERE asignaturas.cod_asig = grupo.cod_asig AND grupo.nrp = profesores.nrp AND profesores.cod_dpto = '2';\
+\
+
+\f1\b \'95 Mostrar los nombres de las asignaturas que tienen aprobadas los alumnos de Granada\
+\
+
+\f0\b0 SELECT DISTINCT asignaturas.nom_asig\
+FROM asignaturas, matriculas, alumnos\
+WHERE asignaturas.cod_asig = matriculas.cod_asig AND matriculas.dni = alumnos.dni AND alumnos.provincia = 'Granada';\
+\
+
+\f1\b \'95 Listar las provincias de las que vienen los alumnos con m\'e1s de un 7 en matem\'e1ticas\
+\
+
+\f0\b0 SELECT DISTINCT alumnos.provincia\
+FROM alumnos, matriculas, asignaturas\
+WHERE alumnos.dni = matriculas.dni AND matriculas.calificacion > '7' AND matriculas.cod_asig = asignaturas.cod_asig AND asignaturas.nom_asig = 'Matematicas';\
+\
+
+\f1\b \'95 Mostrar los nombres y las notas de todos los alumnos de M\'e1laga ordenados alfab\'e9ticamente\
+\
+
+\f0\b0 SELECT DISTINCT alumnos.nom_alum, matriculas.calificacion\
+FROM alumnos, matriculas \
+WHERE alumnos.dni = matriculas.dni AND alumnos.provincia = 'Malaga'\
+ORDER BY alumnos.nom_alum ASC;\
+\
+
+\f1\b \'95 Mostrar las provincias de los alumnos que han sacado un 7 en Matem\'e1ticas\
+\
+
+\f0\b0 SELECT DISTINCT alumnos.provincia\
+FROM alumnos, matriculas, asignaturas\
+WHERE alumnos.dni = matriculas.dni AND matriculas.calificacion = '7'AND matriculas.cod_asig = asignaturas.cod_asig AND asignaturas.nom_asig = 'Matematicas';\
+\
+
+\f1\b \'95 Mostrar las aulas en las que se da clase de asignaturas que aun no tienen asignados cr\'e9ditos.\
+\
+
+\f0\b0 SELECT grupo.cod_aula\
+FROM grupo, asignaturas\
+WHERE grupo.cod_asig = asignaturas.cod_asig AND asignaturas.creditos = '0';\
+\
+
+\f1\b \'95 Mostrar los nombres y las \'e1reas de los profesores, que imparten clase por la ma\'f1ana\
+\
+
+\f0\b0 SELECT DISTINCT profesores.nom_prof, profesores.area\
+FROM profesores, grupo\
+WHERE profesores.nrp = grupo.nrp AND grupo.tipo = 'M';\
+\
+
+\f1\b \'95 Visualizar unas lista de los grupos en los que imparten clase los profesores del \'e1rea de Cient\'edfica.\
+\
+
+\f0\b0 SELECT grupo.cod_gru\
+FROM grupo, profesores\
+WHERE grupo.nrp = profesores.nrp AND profesores.area = 'Cient\'edfica';\
+\
+
+\f1\b \'95 Listar los datos de los alumnos que cursan Matem\'e1ticas, ordenados por su fecha de nacimiento\
+\
+
+\f0\b0 SELECT alumnos.*\
+FROM alumnos, matriculas, asignaturas\
+WHERE alumnos.dni = matriculas.dni AND matriculas.cod_asig = asignaturas.cod_asig AND asignaturas.nom_asig = 'Matem\'e1ticas'\
+ORDER BY alumnos.fecha_nac ASC;}
