@@ -13,7 +13,8 @@
     background: #ffffff;
     color: #006EFF;
     transition: all 0.3s;
-    box-shadow: 5px 0px #EEEEEE;
+    
+    justify-content: space-between;
 }
 .icon-home:before {
     content: "\e900";
@@ -28,7 +29,7 @@
       text-align: center;
   }
  .bg-light{
-     background-color: #ffffff !important;
+     background-color: #F5F5F5 !important;
  }
  .card1{
      
@@ -41,5 +42,19 @@
     background-color:#ffffff;
     border: 1px solid #F5F5F5; 
     box-shadow: 5px 5px #EEEEEE;
+}
+h3{
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    display: flex;
+    
+
+}
+.img-perfil{
+    border-radius: 100%;
+    width: 50px;
+}
+navbar{
+    display: flex;
 }
  
