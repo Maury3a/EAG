@@ -16,6 +16,11 @@
     
     justify-content: space-between;
 }
+p.usuario{
+    margin-left: auto;
+    margin-right: 25px;
+    margin-top: 12px;
+}
 .icon-home:before {
     content: "\e900";
   }
@@ -34,8 +39,10 @@
  .card1{
      
      background-color:#ffffff;
-     border: 1px solid #F5F5F5; 
+     border: 1px solid #F5F5F5;
+     border-radius: 20px; 
      box-shadow: 5px 5px #EEEEEE;
+     justify-content: space-around;
  }
  .card2{
      margin-left: 20%;
@@ -57,4 +64,8 @@ h3{
 navbar{
     display: flex;
 }
- 
+ section#cartas{
+     display: flex;
+     justify-content: space-evenly;
+
+ }
