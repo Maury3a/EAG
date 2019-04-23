@@ -1,3 +1,6 @@
+body{
+    font-family: 'Roboto', sans-serif;;
+}
 .wrapper {
     display: flex;
     width: 100%;
@@ -16,6 +19,61 @@
     
     justify-content: space-between;
 }
+.perfilBoton{
+    border-radius:28px;
+    background: #ffffff;
+    border:none;
+    color: black;
+	display:inline-block;
+	cursor:pointer;
+	font-weight: bold;
+	font-family:Arial;
+	font-size:17px;
+	padding:0px 60px;
+	
+	
+}
+.homeBoton:hover{
+    background:#006EFF;
+    color: white;
+    font-weight: bold;
+}
+.homeBoton{
+    border-radius:28px;
+    background: #ffffff;
+    border:none;
+    color: black;
+	display:inline-block;
+	cursor:pointer;
+	font-weight: bold;
+	font-family:Arial;
+	font-size:17px;
+	padding:0px 60px;
+	
+	
+}
+.perfilBoton:hover{
+    background:#006EFF;
+    color: white;
+    font-weight: bold;
+}
+.agregarBoton{
+    margin-top: 250%;
+    border-radius:28px;
+    background: #ffffff;
+    border:none;
+    color: white;
+	display:inline-block;
+    cursor:pointer;
+    letter-spacing: 0.05rem;
+	font-weight: 600;
+	font-family:Arial;
+	font-size:15px;
+	padding:0px 20px;
+	background:#006EFF;
+	
+}
+
 p.usuario{
     margin-left: auto;
     margin-right: 25px;
@@ -36,14 +94,27 @@ p.usuario{
  .bg-light{
      background-color: #F5F5F5 !important;
  }
- .card1{
-     
-     background-color:#ffffff;
-     border: 1px solid #F5F5F5;
-     border-radius: 20px; 
-     box-shadow: 5px 5px #EEEEEE;
+ .rowCarta1{
+     display: flex;
      justify-content: space-around;
  }
+ .rowCarta2{
+    display: flex;
+    justify-content: space-around;
+    margin-top:5%;
+}
+ .card1{
+     margin-top: 5%;
+     background-color:#ffffff;
+     border: 1px solid #F5F5F5;
+     border-radius:0px 0px 11px 11px;
+     box-shadow: 5px 3px #EEEEEE;
+     justify-content: space-around;
+ }
+ .card2 img{
+     
+   max-height:2%;
+}
  .card2{
      margin-left: 20%;
     background-color:#ffffff;
@@ -54,8 +125,9 @@ h3{
     font-family: 'Roboto', sans-serif;
     justify-content: center;
     display: flex;
-    
-
+}
+h2.productos{
+    text-align: center;
 }
 .img-perfil{
     border-radius: 100%;
@@ -65,7 +137,5 @@ navbar{
     display: flex;
 }
  section#cartas{
-     display: flex;
-     justify-content: space-evenly;
-
+text-align: center;
  }
