@@ -139,3 +139,13 @@ navbar{
  section#cartas{
 text-align: center;
  }
+ div.boton{
+    margin-top: 5%;
+
+ }
+ div.boton button{
+     display: flex;
+     margin:auto;
+     justify-content: center;
+     align-items: center;
+ }
