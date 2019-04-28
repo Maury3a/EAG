@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;;
+    background-color: #EEEEEE;
 }
 .wrapper {
     display: flex;
@@ -85,9 +86,6 @@ p.usuario{
   .sidebar-header{
       align-content: center;
   }
-  body{
-      background-color: #F5F5F5;
-  }
   .list-unstyled{
       text-align: center;
   }
@@ -148,4 +146,17 @@ text-align: center;
      margin:auto;
      justify-content: center;
      align-items: center;
+ }
+ .registro{
+     margin-top: 10%;
+     background-color: #ffffff;
+     padding-bottom: 5%;
+     padding-left: 5%;
+     padding-top: 5%;
+     padding-right: 5%;
+     box-shadow: 5px 5px #E6E6E6;
+     border-radius:11px 11px 11px 11px;
+ }
+ .imgForm{
+     width: 5%;
  }
