@@ -61,10 +61,7 @@ nav.navbar{
     color: white;
     font-weight: bold;
 }
-a:link {
-   
-    color: #F5F5F5;
-  }
+
 .agregarBoton{
     margin-top: 250%;
     border-radius:28px;
@@ -157,6 +154,8 @@ navbar{
 text-align: center;
  }
  div.boton{
+    display: flex;
+     
     margin-top: 5%;
 
  }
@@ -177,5 +176,5 @@ text-align: center;
      border-radius:11px 11px 11px 11px;
  }
  .imgForm{
-     width: 5%;
+     width: 10%;
  }
