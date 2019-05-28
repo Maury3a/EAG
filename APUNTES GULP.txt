@@ -1,0 +1,36 @@
+Instalar gulp snippets
+
+ npm i gulp -g INSTALAMOS GULP
+
+gulp -v   VER LA VERSION
+CLI version: 2.2.0
+
+npm i --save-dev gulp@3.9.1  INSTALAMOS LA VERSION 3.9.1
+
+npm init -y CREAMOS EL PACKAGE JSON AUTOMATICAMENTE DANDOLE TODO A SÍ
+
+touch gulpfile.js CREAMOS EL ARCHIVO GULP
+
+npm i --save-dev gulp-sass INSTALAMOS EL PLUGIN DE SASS PARA GULP
+
+
+
+
+/////////////////////ARCHIVO GULP////////////////
+
+PONEMOS EN EL CÓDIGO GULTA' y saldrá ya la función gulp-task
+
+var gulp = require('gulp');   COMPILAMOS SASS CON ESTA TAREA
+var sass = require('gulp-sass');
+
+gulp.task('default', function() {
+    gulp.src('./src/sass/estilo.scss').pipe(sass({outputStyle:'compressed'}))
+      .pipe(gulp.dest('./src/css'))
+});
+
+ PONEMOS GULP EN EL TERMINAL PARA QUE SE EJECUTE
+
+
+//////////////////////////////////////////////////////////
+
+npm i --save-dev gulp-rename INSTALAMOS EL PLUGIN PARA RENOMBRAR UN ARCHIVO
