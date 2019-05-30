@@ -7,7 +7,7 @@ if(isset($_COOKIE['id']) && !isset($_SESSION['id'])){
   $_SESSION['foto']=$_COOKIE['foto'];
 }
 if(isset($_SESSION['id'])){ //vemos si la sesión está abierta
-  header('location:index.php');
+  // header('location:index.php');
 }
 if(isset($_POST['submit'])){
   $email=$_POST['email'];
@@ -33,13 +33,13 @@ if(isset($_POST['submit'])){
       $sentencia ->execute([$email,$contrasenia]);//hash('sha512',$contrasenia)
       $resultado = $sentencia->fetchAll();
       // var_dump($resultado);
-      if($resultado!=null && $resultado && count($resultado)>0){
+      if($resultado!=null && $resultado && count($resultado)>0){ // si en resultado hay algo
         foreach($resultado as $usuario){
           $_SESSION['email']=$usuario['email']; //vemos si existen las cookies para un autologin
           $_SESSION['contrasenia']=$usuario['contrasenia'];
           $_SESSION['id']=$usuario['id'];
           $_SESSION['foto']=$usuario['foto'];
-          if(isset($_POST['recuerdame'])){
+          if(isset($_POST['recuerdame'])){ //si hemos marcado el checkbox
             setcookie("email", $email, time() + (86400 * 30), "/"); // 86400 = 1 day
             setcookie("contrasenia", $usuario['contrasenia'], time() + (86400 * 30), "/"); // 86400 = 1 day
             setcookie("id", $usuario['id'], time() + (86400 * 30), "/"); // 86400 = 1 day

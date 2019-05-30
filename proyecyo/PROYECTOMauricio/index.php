@@ -43,7 +43,7 @@
                    
                     <a href="perfil.html">   <button class="perfilBoton"> <i class="fas fa-user"></i>&nbsp; &nbsp; Perfil</button><br></a>
                    
-                    <a href="agregarProducto.html"> <button class="agregarBoton"> <i class="fas fa-plus"></i> Agregar producto</button></a>
+                    <a href="agregarProducto.php"> <button class="agregarBoton"> <i class="fas fa-plus"></i> Agregar producto</button></a>
         </nav>
         <!-- Page Content -->
         
@@ -58,6 +58,8 @@
                 <h5 class="card-title">Nintendo 64</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="btn btn-primary">Ir a la Ficha</a>
+                <a href="#" class="btn btn-success">Editar</a>
+                <a href="#" class="btn btn-danger">Borrar</a>
                 </div>
             </div>
             <div class="card1 col-md-3" style="width: 18rem;padding: 3% 3% 0 3%">
