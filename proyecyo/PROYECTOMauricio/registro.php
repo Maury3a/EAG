@@ -19,9 +19,8 @@
         else{
             $contraseña_encriptada = password_hash($_POST["contrasenia"], PASSWORD_DEFAULT);
             $consulta = $conexion->prepare("INSERT INTO usuario (id, Nombre_usuario, email, contrasenia, foto) VALUES (NULL, ?, ?, ?, ?)");
-            $consulta->execute([$_POST["nombre_usuario"],$_POST["email"], $contraseña_encriptada, $_POST["foto"],]);
+            $consulta->execute([$_POST["nombre_usuario"],$_POST["email"], $contraseña_encriptada, $_POST["foto"]);
             $resultado = $consulta->rowCount();
-            var_dump($resultado);
         }
     }   
 ?>

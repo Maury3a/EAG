@@ -10,14 +10,17 @@
     if(!isset($_SESSION["id_usuario"])){
     //header("location:login.php");
     }
-
+    if ($_POST){
+        $idProducto = $_GET['id'];
+    }
     if(isset($_POST["envio"])){
         if(empty($_POST["nombreProducto"]) || empty($_POST["descripcion"]) || empty($_POST["precio"])){
             echo "<p>No se pueden dejar campos vacíos.</p>";
         }
         else{
-            $consulta = $conexion->prepare("INSERT INTO producto (id, nombreProducto, descripcion, precio) VALUES (NULL, ?, ?, ?)");
-            $consulta->execute([$_POST["nombreProducto"], $_POST["descripcion"], $_POST["precio"]]);
+            $idProducto=$_GET['id'];
+            $consulta = $conexion->prepare("UPDATE producto SET nombreProducto=?, descripcion=?, precio=? WHERE id=?");
+            $consulta->execute([$_POST["nombreProducto"], $_POST["descripcion"], $_POST["precio"],$idProducto]);
             $resultado = $consulta->rowCount();
         }
     }
